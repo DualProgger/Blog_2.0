@@ -1,5 +1,6 @@
 /.venv
 */__pycache__
+*/blog/migrations/__pycache__
 */blog/__pycache__
 */accounts/__pycache__
 */services/__pycache__
