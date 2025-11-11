@@ -2,6 +2,7 @@ from django.db import models
 from django.core.validators import FileExtensionValidator
 from mptt.models import MPTTModel, TreeForeignKey
 from django.urls import reverse
+from taggit.managers import TaggableManager
 from django.contrib.auth.models import User
 from apps.services.utils import unique_slugify
 
@@ -50,6 +51,9 @@ class Post(models.Model):
 
     objects = models.Manager()
     custom = PostManager()
+
+    # добавляем тэги
+    tags = TaggableManager()
 
     class Meta:
         db_table = 'blog_post'
@@ -153,3 +157,4 @@ class Comment(MPTTModel):
 
     def __str__(self):
         return f'{self.author}:{self.content}'
+
