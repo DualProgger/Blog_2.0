@@ -136,3 +136,6 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+RECAPTCHA_PUBLIC_KEY = '6LcBIQksAAAAAJoU4tOWDyUYvQflA4z2mJWwdOoS'
+RECAPTCHA_PRIVATE_KEY = '6LcBIQksAAAAAEYLwgPgIZTptHPd4aBngysu4pxJ'
