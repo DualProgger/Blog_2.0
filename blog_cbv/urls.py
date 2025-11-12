@@ -19,12 +19,14 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 from debug_toolbar.toolbar import debug_toolbar_urls
+from apps.blog.feeds import LatestPostFeed
 
 urlpatterns = [
+    path('ckeditor/', include('ckeditor_uploader.urls')),
     path('admin/', admin.site.urls),
+    path('feeds/latest/', LatestPostFeed(), name='latest_post_feed'),
     path('', include('apps.blog.urls')),
     path('', include('apps.accounts.urls')),
-    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
 if settings.DEBUG:
